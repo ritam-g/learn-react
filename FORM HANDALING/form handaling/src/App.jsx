@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import axios from 'axios'
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,12 +34,20 @@ const handleSubmit = (e) => {
   setEmail("");
   setPassword("");
 };
+async function axiCall(params) {
+  //! exios calling better then fect function  
+  params.preventDefault();
+  let {data}=await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+  let {id,title}=data
+  console.log(id,title);
+  
+}
 
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 px-4">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={axiCall}
         className="w-full max-w-md bg-gray-800 rounded-2xl p-8 shadow-xl space-y-5"
       >
         <h2 className="text-2xl font-bold text-white text-center">
