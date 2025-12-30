@@ -18,8 +18,26 @@
 // console.log(sumAll(10, 20));         // 30
 // console.log(sumAll(5));   
 
-numbers = [10, 20, 30, 40, 50]
-let [first,...other]=numbers
-console.log(first);
-console.log(other);
+// numbers = [10, 20, 30, 40, 50]
+// let [first,...other]=numbers
+// console.log(first);
+// console.log(other);
 
+// Create a function that takes the first argument as greeting and the rest as names, then returns an array of greeted strings.JavaScript// Example:
+// greet("Hello", "Ram", "Shyam", "Sita") → ["Hello Ram", "Hello Shyam", "Hello Sita"]
+
+
+function call({name, roll}, ...arr) {  // ← Destructuring pehle, rest baad mein
+    const val = Math.max(...arr);     // ← Declare kiya + const use kiya
+    console.log("Name:", name);
+    console.log("Roll:", roll);
+    console.log("Max value:", val);
+}
+
+let obj = {
+    name: "ritam",
+    roll: "60"
+};
+
+// Sahi tarika call karne ka (individual numbers pass karo)
+call(obj, 1, 2, 3, 4, 5);  // ← Comma se separate numbers
