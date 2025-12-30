@@ -1,0 +1,26 @@
+Here are pure coding questions on Spread Operator (...) and Rest Operator (...) in JavaScript. No theory—just write the code!
+
+Write code to create a new array that combines two arrays arr1 and arr2 using the spread operator.JavaScriptconst arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+// Your code here → new array should be [1,2,3,4,5,6]
+Using spread, clone the following object and change only the age property to 30.JavaScriptconst person = { name: "Alice", age: 25, city: "Delhi" };
+// Your code here → new object with age 30, others same
+Write a function using rest parameters that accepts any number of arguments and returns their sum.JavaScript// Your code here
+console.log(sumAll(1, 2, 3));        // 6
+console.log(sumAll(10, 20));         // 30
+console.log(sumAll(5));              // 5
+Use rest in destructuring to get the first element and the rest of the array.JavaScriptconst numbers = [10, 20, 30, 40, 50];
+// Your code here → get first = 10, others = [20,30,40,50]
+Write code to merge three objects into one using spread. Later properties should override earlier ones.JavaScriptconst obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const obj3 = { c: 5, d: 6 };
+// Your code → result: { a: 1, b: 3, c: 5, d: 6 }
+Create a function that takes the first argument as greeting and the rest as names, then returns an array of greeted strings.JavaScript// Example:
+// greet("Hello", "Ram", "Shyam", "Sita") → ["Hello Ram", "Hello Shyam", "Hello Sita"]
+Using spread, add 3 new elements (7, 8, 9) in the middle of this array after index 2.JavaScriptconst arr = [1, 2, 3, 4, 5, 6];
+// Result should be [1, 2, 3, 7, 8, 9, 4, 5, 6]
+Write a function using rest that returns the maximum number from any number of arguments (don’t use Math.max directly with array).JavaScript// Hint: Use rest + apply or spread
+Copy an array and add a new item at the beginning using only spread.JavaScriptconst original = ["b", "c", "d"];
+// Your code → new array ["a", "b", "c", "d"]
+Use both rest and spread in one line: Remove the first two elements from an array and return a new array with the remaining elements plus a new item at the end.JavaScriptconst input = [10, 20, 30, 40, 50];
+// Result → [30, 40, 50, 999]
